@@ -21,7 +21,8 @@ mod tests {
 
 	#[test]
 	fn test_solution() {
-		let input = String::from("1\\n2\\n3");
+		let input = String::from(r"
+");
 		let answer = solution(&input);
 		assert_eq!(answer, 6);
 	}
