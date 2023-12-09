@@ -2,6 +2,7 @@
 
 from os import mkdir
 from datetime import datetime
+from sys import argv
 
 
 file_main_rs = """use std::fs;
@@ -54,6 +55,8 @@ file_rustfmt_toml = "hard_tabs = true"
 def main():
     day_of_month = datetime.now().day
     day_of_month = str(day_of_month).zfill(2)
+    if len(argv) > 1:
+        day_of_month = argv[1]
     dir_name = f"day-{day_of_month}"
     mkdir(dir_name)
     mkdir(f"{dir_name}/src")
